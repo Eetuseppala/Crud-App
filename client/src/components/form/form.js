@@ -11,13 +11,13 @@ const Form = ({currentId, setCurrentId}) => {
         creator: '', title: '', message: '', tags: '', selectedFile: '' 
     })
 
-    const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null);
+    const selectedPost = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null);
     const classes = useStyles();
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if(post) setPostData(post);
-    }, [post])
+        if(selectedPost) setPostData(selectedPost);
+    }, [selectedPost])
 
 
     const handleSubmit = (e) => {
@@ -29,10 +29,12 @@ const Form = ({currentId, setCurrentId}) => {
             dispatch(createPost(postData));
             console.log(postData);
         }
+        clear();
     }
 
     const clear = () => {
-
+        setCurrentId(null);
+        setPostData({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
     }
 
     return (

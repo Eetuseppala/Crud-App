@@ -22,13 +22,13 @@ const App = () => {
         <Container maxWidth='lg'>
             <AppBar className={classes.appBar} position='static' color='inherit'>
                 <Typography className={classes.heading} variant='h3' align='center'>
-                    Sivu
+                    Jonkinlainen suomalainen nettisivu! / Some kind of a finnish website!
                 </Typography>
                 <img className={classes.image} src={crud_app} alt='kuva' height='250' width='250' align='center'/>
             </AppBar>
             <Grow in>
                 <Container>
-                    <Grid container justifyContent='space-between' align items='stretch' spacing={3}>
+                    <Grid container justifyContent='space-between' align-items='stretch' spacing={3}>
                         <Grid item xs={12} sm={7}>
                             <Posts setCurrentId={setCurrentId}/>
                         </Grid>

@@ -9,10 +9,11 @@ import useStyles from './styles';
 const Posts = ({setCurrentId}) => {
     const classes = useStyles();
     const posts = useSelector((state) => state.posts);
+
     return (
         !posts.length ? <CircularProgress /> : (
             <Grid className='container' container alignItems='stretch' spacing={3}>
-                {posts.map((post) => (
+                {posts.slice(0).reverse().map((post) => (
                     <Grid key={post._id} item xs={12} sm={6}>
                         <Post post={post} setCurrentId={setCurrentId}/>
                     </Grid>
@@ -23,3 +24,5 @@ const Posts = ({setCurrentId}) => {
 }
 
 export default Posts;
+
+//posts.map((post)
