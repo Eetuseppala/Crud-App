@@ -5,7 +5,7 @@ export default makeStyles({
     height: 0,
     paddingTop: '56.25%',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    backgroundBlendMode: 'darken',
+    backgroundBlendMode: 'normal',
   },
   border: {
     border: 'solid',
@@ -17,7 +17,7 @@ export default makeStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    borderRadius: '15px',
+    borderRadius: '7px',
     height: '100%',
     position: 'relative',
   },
